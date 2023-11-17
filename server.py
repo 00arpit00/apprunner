@@ -10,9 +10,8 @@ def hello_world(request):
     if name == None or len(name) == 0:
         name = "world"
     message = "Hello, " + name + str(port) + "!\n"
-    data = socket.gethostbyname_ex("www.google.com")
-    logging.debug("\n\nThe IP Address of the Domain Name is: "+repr(data))
-    return Response(message + "\n\nThe IP Address of the Domain Name is: "+repr(data))
+    
+    return Response(message + "Client IP:" + request.environ['HTTP_X_FORWARDED_FOR'])
     
 
 if __name__ == '__main__':
