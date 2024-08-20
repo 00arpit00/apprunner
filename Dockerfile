@@ -1,4 +1,4 @@
-FROM alpine:3.14 AS verify
+FROM alpine:3.10 AS verify
 RUN apk add --no-cache curl tar xz
 
 RUN ROOTFS=$(curl -sfOJL -w "al2023-container-2023.5.20240805.0-x86_64.tar.xz" "https://amazon-linux-docker-sources.s3.amazonaws.com/al2023/2023.5.20240805.0/al2023-container-2023.5.20240805.0-x86_64.tar.xz") \
