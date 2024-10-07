@@ -1,3 +1,5 @@
 pyramid==2.0
 requests
-
+pandas==2.2.3
+fastapi==0.115.0
+uvicorn==0.31.0
