@@ -1,7 +1,6 @@
-from fastapi import FastAPI
-import uvicorn
+import fastapi, uvicorn
 
-app = FastAPI()
+app = fastapi.FastAPI()
 
 print("Starting webserver...")
 uvicorn.run(
