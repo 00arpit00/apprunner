@@ -1,7 +1,13 @@
-from fastapi import FastAPI
+import fastapi, uvicorn, os
 
-app = FastAPI()
+app = fastapi.FastAPI()
 
+print("Starting webserver...")
+uvicorn.run(
+    app,
+    host="0.0.0.0",
+    port=8000
+)
 # Root endpoint example
 @app.get("/")
 def read_root():
