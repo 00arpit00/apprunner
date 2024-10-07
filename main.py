@@ -6,9 +6,7 @@ print("Starting webserver...")
 uvicorn.run(
     app,
     host="0.0.0.0",
-    port=8000,
-    debug=os.getenv("DEBUG", True),
-    log_level=os.getenv('LOG_LEVEL', "debug")
+    port=8000
 )
 # Root endpoint example
 @app.get("/")
